@@ -4,14 +4,15 @@ module.exports = {
 	development: {
 		client: "sqlite3",
 		connection: {
-			filename: "./data/projects.db3",
+			filename: "./data/db-config.js",
 		},
 		migrations: {
 			directory: "./data/migrations",
 		},
 		seeds: {
-			directory: "./data/migrations",
+			directory: "./data/migrations/seeds",
 		},
+		useNullAsDefault: true,
 
 		staging: {
 			client: "postgresql",
